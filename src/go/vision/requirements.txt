@@ -1,0 +1,12 @@
+decord
+torch
+numpy
+huggingface_hub
+transformers
+pandas
+pickle5
+matplotlib
+scikit-learn
+tqdm
+opencv-python
+Pillow
