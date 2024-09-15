@@ -19,7 +19,8 @@ os.dup2(FNULL.fileno(), sys.stderr.fileno())
 class ListenProcessor():
     def __init__(self):
         self.should_speak = Value('i', 1) 
-        self.dir_context = DirectoryContext(base_dir=f"{Path.home()}/RevivingUnitree/src/go/videos")
+        #TODO fix imports for more modularity
+        self.dir_context = DirectoryContext(base_dir=f"{Path.home()}/WorkingDir/src/go/videos")
     def read_variables(self):
         file_path = os.path.join(self.dir_context.inference_data_dir, "inference_variables.json")
         with open(file_path, 'r') as f:

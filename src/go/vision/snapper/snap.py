@@ -10,7 +10,8 @@ class Snapper:
             raise Exception("Could not open video stream.")
 
     def get_frame(self):
-            CURRENT_FRAME = "/home/dicelabs/RevivingUnitree/src/go/vision/snapper/current_frame.jpg"
+            #TODO fix imports for more modularity
+            CURRENT_FRAME = "/home/dicelabs/WorkingDir/src/go/vision/snapper/current_frame.jpg"
             ret, frame = self.cam.read()
             if not ret:
                 raise Exception("Failed to read frame from stream.")

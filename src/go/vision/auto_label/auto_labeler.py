@@ -11,7 +11,8 @@ from pathlib import Path
 class AutoLabeler:
     def __init__(self, local_server_ip):
         self.local_server_ip = local_server_ip
-        self.dir_context = DirectoryContext(base_dir=f"{Path.home()}/RevivingUnitree/src/go/videos")
+        #TODO fix imports for more modularity
+        self.dir_context = DirectoryContext(base_dir=f"{Path.home()}/WorkingDir/src/go/videos")
         self.recorder = VideoRecorder(self.dir_context)
         self.label_context = LabelingContext()
         self.inferencer = Inferencer(self.label_context, self.dir_context)
