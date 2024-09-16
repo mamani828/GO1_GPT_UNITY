@@ -13,6 +13,8 @@ The architecture involves communication between:
 2. Python backend: Manages inner communications between APIs and processes
 3. Go1 API: Provides robotic control
 
+![Arch](images/Architecture.png "System Architecture")
+
 ## Communication Architecture
 
 - Uses a generic client-server architecture
@@ -20,6 +22,7 @@ The architecture involves communication between:
 - Separate processes prevent overload and slowdown of a single process
 - Python forker starts these processes on launch
 
+![Forker](images/Forker.png "Forking Process")
 ## Current Implementation
 
 The current setup works with:
