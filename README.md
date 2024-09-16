@@ -1,23 +1,55 @@
 # GO1_GPT_UNITY
-This codebase is a configuration of scripts to enable the control, edge sensor communication and BIM integration. The high-level architecture follows a communication between Unity Game Engine which handles navigation and robot control through BIM, a Python backend that handles the inner communications between APIs and processes, and the Go1 API for robotic control. 
+# Codebase Overview and Setup Instructions
 
-The backbone of the communications between processes is done through a generic client-server architecture. This modular setup gives us the opportunity to be able to add custom scripts to the system on seperate processes. Having seperate processes prevents a single process from getting overloaded and slowed down. We use the Python forker to start these processes on launch. 
+## High-Level Architecture
 
-The current code/example is made to work with an edge camera for activity recognition and autonomius data labeling. OpenAI ChatGPT API, ElevenLabs API for text-to-speech, and a microphone with the Google TTS for speech to text.
+This codebase configures scripts for:
+- Robot control
+- Edge sensor communication
+- BIM (Building Information Modeling) integration
 
+The architecture involves communication between:
+1. Unity Game Engine: Handles navigation and robot control through BIM
+2. Python backend: Manages inner communications between APIs and processes
+3. Go1 API: Provides robotic control
 
-To start the code, SSH into the unitree.
+## Communication Architecture
 
-Run Python3 go_srv.py
+- Uses a generic client-server architecture
+- Modular setup allows addition of custom scripts on separate processes
+- Separate processes prevent overload and slowdown of a single process
+- Python forker starts these processes on launch
 
-In a seperate terminal run:
- 
+## Current Implementation
+
+The current setup works with:
+- Edge camera for activity recognition and autonomous data labeling
+- OpenAI ChatGPT API
+- ElevenLabs API for text-to-speech
+- Microphone with Google TTS for speech-to-text
+
+## Setup Instructions
+
+1. SSH into the Unitree
+
+2. Start the main server:
+'''
+python3 go_srv.py
+'''
+3. In a separate terminal, run the YOLO server:
+'''
 python3 yolo_internal_srv.py
+'''
 
-Either add the listen_srv.py to the forker or run the internal server in a seperate terminal (for logging purposes to not overcrowd one terminal)
+4. Run the listen server (choose one method):
+- Add `listen_srv.py` to the forker, OR
+- Run in a separate terminal:
+  ```
+  python3 listen_internal_srv.py
+  ```
 
-python3 listen_internal_srv.py
+5. Run the main file:
 
-and then run the main file:
-
-python3 main_unitree.py
+'''
+main_unitree.py
+'''
