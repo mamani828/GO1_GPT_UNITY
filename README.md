@@ -1,4 +1,5 @@
 # GO1_GPT_UNITY
+A package to utilize the Unitree Go1 with custom edge sensors and 3D maps.
 # Codebase Overview and Setup Instructions
 
 ## High-Level Architecture
