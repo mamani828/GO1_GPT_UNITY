@@ -5,7 +5,7 @@ from services import ServiceNames, ServicePorts
 from req_resp import GenericRequest
 from snap import Snapper
 #TODO fix imports for more modularity
-""" # /home/dicelabs/WorkingDir/src/go/videos/person.jpeg """
+""" # /home/WorkingPC/WorkingDir/src/go/videos/person.jpeg """
 
 def detect():
     snapper = Snapper()
@@ -14,7 +14,7 @@ def detect():
     return call_service(port=ServicePorts[ServiceNames.YOLO], 
                 request=GenericRequest(
                     function="detect", 
-                    args={"filepath": "/home/dicelabs/WorkingDir/src/go/vision/snapper/current_frame.jpg"}
+                    args={"filepath": "/home/WorkingPC/WorkingDir/src/go/vision/snapper/current_frame.jpg"}
     ))
 
 if __name__ == "__main__":

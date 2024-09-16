@@ -16,7 +16,7 @@ class ExplainProcessor:
         # self.model_name = "gpt-4o"
         self.frames_to_extract = 5  # number of frames to use for explanation
         # initialize the ExplainProcessor with an OpenAI API key
-        self.api_key="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"
+        self.api_key="INSERT KEY"
         self.use_speak_service = True  # set to False to disable the speak service
         
     def explain(self, video_path: str, activity: str, probability: float, timestamp: str, dir_context):
