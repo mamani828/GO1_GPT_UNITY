@@ -33,13 +33,13 @@ The current setup works with:
 1. SSH into the Unitree
 
 2. Start the main server:
-'''
+ ```
 python3 go_srv.py
-'''
+ ```
 3. In a separate terminal, run the YOLO server:
-'''
+ ```
 python3 yolo_internal_srv.py
-'''
+ ```
 
 4. Run the listen server (choose one method):
 - Add `listen_srv.py` to the forker, OR
@@ -50,6 +50,6 @@ python3 yolo_internal_srv.py
 
 5. Run the main file:
 
-'''
+ ```
 main_unitree.py
-'''
+ ```
